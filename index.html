@@ -15,7 +15,7 @@
         document.getElementById('submitButton').addEventListener('click', function() {
             const textInput = document.getElementById('textInput').value;
 
-            fetch('http://backend:5000/submit', {
+            fetch('http://localhost:5000/submit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -29,7 +29,7 @@
         });
 
         document.getElementById('getInfoButton').addEventListener('click', function() {
-            fetch('http://backend:5000/get_info')
+            fetch('http://localhost:5000/get_info')
             .then(response => response.json())
             .then(data => {
                 alert(data.data);
